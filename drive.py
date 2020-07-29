@@ -38,8 +38,6 @@ def main():
     args = parse_args()
     gauth = GoogleAuth()
 
-    print(os.environ["DRIVE_SECRET_PATH"], os.environ["DRIVE_CRED_PATH"])
-
     gauth.LoadClientConfigFile(os.environ["DRIVE_SECRET_PATH"])
     gauth.LoadCredentialsFile(os.environ["DRIVE_CRED_PATH"])
     drive = GoogleDrive(gauth)
