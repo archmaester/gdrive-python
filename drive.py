@@ -108,7 +108,7 @@ def upload_files(drive, folder_id, folder_path):
                 f.SetContentFile(os.path.join(folder_path, file))
                 f.Upload() 
         else:
-            print('file {0} is empty :('.format(file1))
+            print('file {0} is empty :('.format(file))
 
 
 if __name__ == "__main__":
