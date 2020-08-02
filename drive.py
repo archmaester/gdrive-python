@@ -122,7 +122,7 @@ def download_folder(drive, folder_id, savel_path):
 def download_file(drive, file_id, save_name, save_path):
     
     file = drive.CreateFile({'id': file_id})
-    file.GetContentFile(os.path.join(save_path, save_name))
+    file.GetContentFile(os.path.join(save_path, file['title']))
 
 
 if __name__ == "__main__":
