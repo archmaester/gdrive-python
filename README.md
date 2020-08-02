@@ -16,6 +16,8 @@ python drive.py --upload-file --parent-id $DRIVE_FOLDER_ID --file-name $FILENAME
 #### Script for uploading a folder
 python drive.py --upload-folder --parent-id $DRIVE_FOLDER_ID --folder-name $UPLOADNAME --folder-path $FOLDERPATH
 
+#### References
+- https://medium.com/analytics-vidhya/pydrive-to-download-from-google-drive-to-a-remote-machine-14c2d086e84e
 ## To Do List
 - Updating settings.yaml
 - Allow download of files
