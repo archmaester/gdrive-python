@@ -42,6 +42,17 @@ python drive.py --upload-folder --parent-id $DRIVE_FOLDER_ID --folder-name $UPLO
 
 - https://medium.com/analytics-vidhya/pydrive-to-download-from-google-drive-to-a-remote-machine-14c2d086e84e
 
+## Done List
+
+- Recursively upload folders and files
+- Add settings.yaml
+- No verification for subsequent runs
+- Upload file 
+- Upload folder
+
 ## To Do List
-- Updating settings.yaml
-- Allow download of files
+
+- Script to download files
+- Script to list files in a folder
+- Script to update files
+- Script to delete files
