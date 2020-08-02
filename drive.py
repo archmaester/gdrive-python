@@ -11,9 +11,6 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description='API for managing Google drive')
     parser.add_argument(
-        '--generate-cred', dest='generate_cred', help='Generates creds.txt',
-        action='store_true')
-    parser.add_argument(
         '--upload-file', dest='upload_file', help='Uploading file to Google Drive',
         action='store_true')
     parser.add_argument(
@@ -62,9 +59,8 @@ def main():
         file.Upload()
         print("You have successfully uploaded the file")
 
-        
     if args.upload_folder:
-        
+
         create_folder(drive, args.folder_name, args.parent_id, args.folder_path)
 
 
@@ -88,7 +84,7 @@ def upload_files(drive, folder_id, folder_path):
         statinfo = stat(os.path.join(folder_path, file))
         if statinfo.st_size > 0:
 
-            print('Uploading :):) ' + file)
+            print('Uploading .......' + file)
             if os.path.isdir(os.path.join(folder_path, file)):
                 create_folder(drive, file, folder_id, os.path.join(folder_path, file))
             else:
@@ -97,8 +93,9 @@ def upload_files(drive, folder_id, folder_path):
                     "parents": [{"kind": "drive#fileLink", "id": folder_id}]})
                 f.SetContentFile(os.path.join(folder_path, file))
                 f.Upload() 
+            print('Uploaded :):) ' + file)
         else:
-            print('file {0} is empty :('.format(file))
+            print('File {0} is empty :('.format(file))
 
 
 if __name__ == "__main__":

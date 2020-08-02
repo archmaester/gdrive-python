@@ -1,3 +1,4 @@
-*.json
-*.sh
-*.yaml
+creds.json
+client_secrets.json
+jobs.sh
+settings.yaml

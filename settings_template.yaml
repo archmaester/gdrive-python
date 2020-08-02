@@ -1,0 +1,9 @@
+client_config_backend: settings
+client_config:
+   client_id: EnterClientIdHere
+   client_secret: EnterClientSecretHere
+save_credentials: True
+save_credentials_backend: file
+save_credentials_file: creds.json
+oauth_scope:
+- https://www.googleapis.com/auth/drive
