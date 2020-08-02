@@ -1,7 +1,7 @@
 # GoogleDrive Python API
 Lets you upload files and folders to google drive assuming one has registered on developers.google and has client_secrets.json
 
-#### Prerequisites
+#### Instructions
 - After downloading the client_secrets.json do
 
 ```
