@@ -44,15 +44,15 @@ python drive.py --upload-folder --parent-id $DRIVE_FOLDER_ID --folder-name $UPLO
 
 ## Done List
 
-- Recursively upload folders and files
-- Add settings.yaml
-- No verification for subsequent runs
-- Upload file 
-- Upload folder
-
+- ✅ Recursively upload folders and files
+- ✅ Add settings.yaml
+- ✅ No verification for subsequent runs
+- ✅ Upload file 
+- ✅ Upload folder
+⬜️
 ## To Do List
 
-- Script to download files
-- Script to list files in a folder
-- Script to update files
-- Script to delete files
+- ⬜️ Script to download files
+- ⬜️ Script to list files in a folder
+- ⬜️ Script to update files
+- ⬜️ Script to delete files
