@@ -38,9 +38,21 @@ python drive.py --upload-folder --parent-id $DRIVE_FOLDER_ID --folder-name $UPLO
 - **UPLOADNAME**: name of the folder to be uploaded that will appear on the drive
 - **FOLDERPATH**: Path to the folder which you want to upload
 
+
+#### Script for downloading a file
+
+```
+python drive.py --download-file --file-id $DRIVE_FILE_ID --download-name $DOWNLOADNAME --file-path $FOLDERPATH
+```
+
+- **DRIVE_FILE_ID**: Id of the file to be downloaded
+- **DOWNLOADNAME**: name of the file that will be used for saving
+- **FOLDERPATH**: Path to the folder where the file is to be saved
+
 #### References
 
 - https://medium.com/analytics-vidhya/pydrive-to-download-from-google-drive-to-a-remote-machine-14c2d086e84e
+- https://medium.com/analytics-vidhya/how-to-connect-google-drive-to-python-using-pydrive-9681b2a14f20
 
 ## Done List
 
@@ -49,10 +61,11 @@ python drive.py --upload-folder --parent-id $DRIVE_FOLDER_ID --folder-name $UPLO
 - ✅  No verification for subsequent runs
 - ✅  Upload file 
 - ✅  Upload folder
+- ✅  Download file
 
 ## To Do List
 
-- ⬜️  Script to download files
+
 - ⬜️  Script to list files in a folder
 - ⬜️  Script to update files
 - ⬜️  Script to delete files

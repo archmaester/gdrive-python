@@ -11,13 +11,22 @@ def parse_args():
     parser = argparse.ArgumentParser(
         description='API for managing Google drive')
     parser.add_argument(
-        '--upload-file', dest='upload_file', help='Uploading file to Google Drive',
+        '--upload-file', dest='upload_file',
+        help='Uploading file to Google Drive',
         action='store_true')
     parser.add_argument(
-        '--upload-folder', dest='upload_folder', help='Uploading folder to Google Drive',
+        '--download-file', dest='download_file',
+        help='Downloading file from Google Drive',
+        action='store_true')
+    parser.add_argument(
+        '--upload-folder', dest='upload_folder',
+        help='Uploading folder to Google Drive',
         action='store_true')
     parser.add_argument(
         '--parent-id', dest='parent_id', help='Id of the parent folder',
+        default='', type=str)
+    parser.add_argument(
+        '--file-id', dest='file_id', help='Id of the file',
         default='', type=str)
     parser.add_argument(
         '--file-name', dest='file_name',
@@ -32,12 +41,16 @@ def parse_args():
         help='title of the file that will be saved',
         default='', type=str)
     parser.add_argument(
+        '--download-name', dest='download_name',
+        help='title of the file that will be saved',
+        default='', type=str)
+    parser.add_argument(
         '--file-path', dest='file_path',
-        help='Path of the file where it is to be saved/fetcher',
+        help='Path of the file where it is to be saved/fetched',
         default='', type=str)
     parser.add_argument(
         '--folder-path', dest='folder_path',
-        help='Path of the file where it is to be saved/fetcher',
+        help='Path of the file where it is to be saved/fetched',
         default='', type=str)
 
     args = parser.parse_args()
@@ -61,8 +74,11 @@ def main():
 
     if args.upload_folder:
 
-        create_folder(drive, args.folder_name, args.parent_id, args.folder_path)
+        create_folder(drive, args.folder_name,
+                      args.parent_id, args.folder_path)
 
+    if args.download_file:
+        download_file(drive, args.file_id, args.download_name, args.file_path)
 
 def create_folder(drive, folder_name, parent_id, folder_path):
     
@@ -96,6 +112,17 @@ def upload_files(drive, folder_id, folder_path):
             print('Uploaded :):) ' + file)
         else:
             print('File {0} is empty :('.format(file))
+
+
+def download_folder(drive, folder_id, savel_path):
+    
+    pass
+
+
+def download_file(drive, file_id, save_name, save_path):
+    
+    file = drive.CreateFile({'id': file_id})
+    file.GetContentFile(os.path.join(save_path, save_name))
 
 
 if __name__ == "__main__":
