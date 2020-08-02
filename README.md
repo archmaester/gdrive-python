@@ -42,11 +42,10 @@ python drive.py --upload-folder --parent-id $DRIVE_FOLDER_ID --folder-name $UPLO
 #### Script for downloading a file
 
 ```
-python drive.py --download-file --file-id $DRIVE_FILE_ID --download-name $DOWNLOADNAME --file-path $FOLDERPATH
+python drive.py --download-file --file-id $DRIVE_FILE_ID --file-path $FOLDERPATH
 ```
 
 - **DRIVE_FILE_ID**: Id of the file to be downloaded
-- **DOWNLOADNAME**: name of the file that will be used for saving
 - **FOLDERPATH**: Path to the folder where the file is to be saved
 
 #### References
